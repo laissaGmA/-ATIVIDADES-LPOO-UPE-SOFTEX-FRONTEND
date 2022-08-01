@@ -1,0 +1,18 @@
+numero1 = float(input("Digite um número: "))
+numero2 = float(input("Digite outro número: "))
+print("1. Soma 2. Subtração 3. Multiplicação 4. Divisão")
+operação = int(input("Digite um número conforme a operação que você queira seguir: "))
+if operação == 1:
+  resultado = numero1 + numero2
+  print (resultado)
+elif operação == 2:
+  resultado = numero1 - numero2
+  print(resultado)
+elif operação == 3:
+  resultado = numero1*numero2
+  print(resultado)
+elif operação == 4:
+  resultado = numero1/numero2
+  print(resultado)
+else:
+  print("Operação cancelada: 0")
