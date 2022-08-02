@@ -1,0 +1,66 @@
+candidatox = 0
+candidatoy = 0
+candidatoz = 0
+nulo = 0
+ 
+for i in range(3):
+  autentic = False
+  while (autentic == False):
+    print("Vote em um dos candidatos: - candidato_X (889) - candidato_Y (847) - candidato_Z (515) - branco (0)" )
+    
+    try:
+    
+      voto = int(input()) 
+      
+      if voto == 889:
+        print("Você votou no canditato_x n° 889")
+        print("Informe se você deseja confirmar o voto e finalizar a votação? (sim/não)")
+        resp = input()
+        if resp == "sim":
+          candidatox = candidatox + 1
+          print("Seu voto foi gravado")
+          autentic = True
+      elif voto == 847:
+        print("Você votou no canditato_y n° 847")
+        print("Informe se você deseja confirmar o voto e finalizar a votação? (sim/não)")
+        resp = input()
+        if resp == "sim":
+          candidatoy = candidatoy + 1
+          print("Seu voto foi gravado")
+          autentic = True
+      elif voto == 515:
+        print("Você votou no canditato_z n° 515")
+        print("Informe se você deseja confirmar o voto e finalizar a votação? (sim/não)")
+        resp = input()
+        if resp == "sim":
+          candidatoz = candidatoz + 1
+          print("Seu voto foi gravado")
+          autentic = True
+      elif voto == 0:
+       print("Você votou na opçao em branco n° 0")
+       print("Informe se você deseja confirmar o voto e finalizar a votação? (sim/não)")
+       resp = input()
+       if resp == "sim":
+          nulo = nulo + 1
+          print("Seu voto foi garavado")
+          autentic = True
+      else:
+        nulo = nulo + 1
+        print("Você inseriu um número de cadidato inexistente no nosso banco de dados e seu voto foi contabilizado como nulo")
+        autentic = True
+    except:
+      print("Erro! Tente novamente.")
+ 
+print("Votação finalizada")
+ 
+if (candidatox > candidatoy) and (candidatox> candidatoz):
+  print("Vencedor da Eleição: Candidato_x nº 889 ")
+elif (candidatoy > candidatox) and (candidatoy > candidatoz):
+  print("Vencedor da Eleição: Candidato_y nº 847 ")
+elif (candidatoz > candidatox) and (candidatoz > candidatoy):
+  print("Vencedor da Eleição: Candidato_z nº 515 ")
+  
+print("candidato_X:", candidatox, "votos")
+print("candidato_Y:", candidatoy, "votos")
+print("candidato_Z:", candidatoz, "votos")
+print("Votos nulos:", nulo,)
