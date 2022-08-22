@@ -1,0 +1,46 @@
+class Produto:
+    TotalDeProdutos = 0
+    def conta_Produto ():
+       Produto.TotalDeProdutos += 1
+    def __init__(self, classificacao, valor):
+        self.classificacao = classificacao
+        self.valor = valor
+        ação = "ligado"
+    
+    @property
+    def classificacao(self):
+      return self._classificacao
+    
+    @classificacao.setter
+    def classificacao(self, classificacao):
+      self._classificacao = classificacao.title()
+       
+       
+    @property
+    def valor(self):
+      return self._valor
+
+    @valor.setter
+    def valor(self, valor):
+      if isinstance(valor, str):
+        valor = float(valor)
+      self._valor = valor
+       
+
+Produto1 = Produto('vestido', 145)
+Produto2 = Produto('Camisa', '68')
+Produto . conta_Produto ()
+Produto . conta_Produto ()
+
+
+print("Produto: " + str(Produto1.classificacao),"|", "Valor: " + str(Produto1.valor) + " reais")
+print("Produto: " + str(Produto2.classificacao),"|", "Valor: " + str(Produto2.valor) + " reais")
+print("Total de Produtos:",Produto . TotalDeProdutos)
+ação = (input("Desligue o receptor (digite: desligar) " ))
+if ação == 'desligar':
+  print("Receptor desligado")
+while ação != 'desligar':
+  print('INFORMAÇÃO NÃO RECONHECIDA')
+  ação = (input("Desligue o receptor (digite: desligar) " ))
+  if ação == 'desligar':
+   print("Receptor desligado")
