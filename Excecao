@@ -1,0 +1,17 @@
+package Ex;
+
+import java.util.Scanner;
+
+public class TratamentoDeExceção {
+
+	public static void main(String[] args) {
+		Scanner ler = new Scanner(System.in);
+		try {
+			int n = ler.nextInt();
+			System.out.println(20/n);
+		} catch(Exception erro) {
+			System.out.println("Ocorreu um erro"+erro);
+		}
+	}
+	
+}
