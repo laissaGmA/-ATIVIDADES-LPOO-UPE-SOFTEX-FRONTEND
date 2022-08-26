@@ -1,0 +1,12 @@
+   java.io.serealizable
+	        
+          FileOutputStream arquivo.c = FileOutputStream ln.bd = new fileOutputStream (./arq/arquivo);
+	        ObjectOutputStream objectOutput = new ObjectOutputStream(new FileOutputStream(arquivo.c));
+	        objectOutput.writeObject(item);
+	        objectOutput.close();
+	        
+	        FileInputStream arquivo.c = new FileInputStream ln.bd = new fileInputStream (./arq/arquivo);
+	        ObjectInputStream objectInput = new ObjectInputStream(arquivo.c);
+	        item objectInput.readObject();
+	        objectInputInput.close();
+	        return item;
